@@ -23,7 +23,7 @@ function sendToGROQAPI(userInput) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer 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' // Replace with your actual API key
+            'Authorization': 'Bearer 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' // Replace with your actual API key
         },
         body: JSON.stringify({
             messages: [
