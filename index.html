@@ -6,8 +6,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatbot with Groq API</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Global styles for body */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: #333;
+            padding: 10px 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        /* Navbar list styles */
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: inline-flex;
+            gap: 20px;
+        }
+
+        /* Navbar link styles */
+        .navbar ul li {
+            display: inline;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 5px 15px;
+            transition: background-color 0.3s;
+        }
+
+        /* Hover effect for navbar links */
+        .navbar ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        /* Chat container styles */
+        .chat-container {
+            margin-top: 80px; /* Space for the fixed navbar */
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Chat area where messages will be displayed */
+        .chat-area {
+            height: 400px;
+            overflow-y: auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* Input field and button styles */
+        .user-input-container {
+            display: flex;
+        }
+
+        .user-input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .send-button {
+            padding: 10px 20px;
+            margin-left: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        /* Button hover effect */
+        .send-button:hover {
+            background-color: #555;
+        }
+    </style>
 </head>
 <body>
+
+    <!-- Navbar Section -->
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </div>
+
+    <!-- Chatbot Container -->
     <div class="chat-container">
         <div id="chat-area" class="chat-area"></div>
         <div class="user-input-container">
@@ -16,6 +124,8 @@
         </div>
     </div>
 
+    <!-- Link to external JS file -->
     <script src="script.js" type="module"></script>
+
 </body>
 </html>
